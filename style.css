@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary */
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+
+  /* ### Neutral */
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--very-dark-blue);
+  background-color: var(--off-white);
+  padding: 5rem 2rem;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.mobile {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-text {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--very-dark-blue);
+  margin: 0;
+  letter-spacing: 2px;
+  font-family: "Orbitron", sans-serif;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.navbar__desktop {
+  display: none;
+}
+
+/* Mobile Navbar */
+.navbar__mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  max-width: 350px;
+  padding: 2rem;
+  color: var(--very-dark-blue);
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.navbar__mobile.open {
+  display: block;
+}
+
+.navbar__mobile ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  margin-top: 8rem;
+}
+
+.navbar__mobile ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--very-dark-blue);
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.navbar__mobile ul li a:hover {
+  color: var(--soft-orange);
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar__mobile {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .navbar__desktop {
+    display: block;
+  }
+
+  .navbar__desktop ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .navbar__icons {
+    display: none;
+  }
+}
+
+.navbar__desktop ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+}
+
+.navbar__desktop ul li a:hover {
+  color: var(--soft-orange);
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.hero__image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.hero-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  min-height: 300px;
+}
+
+@media screen and (min-width: 868px) {
+  .intro {
+    grid-template-columns: 2fr auto;
+  }
+}
+
+.hero__text {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+}
+
+.hero__text h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--very-dark-blue);
+}
+
+@media screen and (min-width: 868px) {
+  .hero__text {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .hero__text h1 {
+    max-width: 320px;
+    font-size: 3.5rem;
+  }
+}
+
+.hero__text p {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--dark-grayish-blue);
+}
+
+.hero__text a {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  background-color: var(--soft-red);
+  color: var(--off-white);
+  font-size: 0.8375rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.hero__text a:hover {
+  background-color: var(--very-dark-blue);
+}
+
+.news {
+  background-color: var(--very-dark-blue);
+  padding: 2rem 1.5rem;
+}
+
+@media screen and (min-width: 868px) {
+  .news {
+    max-width: 350px;
+  }
+}
+
+.news h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--soft-orange);
+}
+
+.news article {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--dark-grayish-blue);
+}
+
+.news article:last-child {
+  padding-bottom: 0rem;
+  border-bottom: none;
+}
+
+.news article h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--off-white);
+  cursor: pointer;
+}
+
+.news article h3 a {
+  color: var(--off-white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.news article h3:hover a,
+.news article h3 a:hover {
+  color: var(--soft-orange);
+}
+
+.news article p {
+  color: var(--grayish-blue);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.featured {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  margin-top: 4.5rem;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 868px) {
+  .featured {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .feature {
+    max-width: 345px;
+  }
+}
+
+.feature__image img {
+  width: 100px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.feature__content h2 {
+  color: var(--grayish-blue);
+  margin: 0;
+  line-height: 1;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.feature__content h3 {
+  color: var(--very-dark-blue);
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin-top: 0.75rem;
+  cursor: pointer;
+}
+
+.feature__content h3 a {
+  color: var(--very-dark-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.feature__content h3:hover a,
+.feature__content h3 a:hover {
+  color: var(--soft-red);
+}
+
+.feature__content p {
+  color: var(--dark-grayish-blue);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  margin-top: 0.5rem;
+}
