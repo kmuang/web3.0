@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="article.css" />
+    <title>Edge AI: Intelligence Close to the Data | Web 3.0</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo"><a href="index.html"><h1 class="logo-text">WEB 3.0</h1></a></div>
+          <div class="navbar">
+            <img src="./assets/images/icon-menu.svg" alt="Open navigation menu" class="hamburger" />
+            <div class="navbar__mobile"><img src="./assets/images/icon-menu-close.svg" alt="Close navigation menu" class="close" /><ul class="navbar__content">
+              <li><a href="index.html">Home</a></li><li><a href="index.html">New</a></li><li><a href="index.html">Popular</a></li><li><a href="index.html">Trending</a></li><li><a href="index.html">Categories</a></li>
+            </ul></div>
+            <div class="navbar__desktop"><ul>
+              <li><a href="index.html">Home</a></li><li><a href="index.html">New</a></li><li><a href="index.html">Popular</a></li><li><a href="index.html">Trending</a></li><li><a href="index.html">Categories</a></li>
+            </ul></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main><div class="container">
+      <article class="article-detail">
+        <header class="article-header">
+          <span class="article-number">10 · MACHINE LEARNING</span>
+          <h1>Edge AI: Intelligence Close to the Data</h1>
+          <p class="article-meta">Technology briefing • 5 min read</p>
+        </header>
+        <img src="assets/images/edge-ai.jpg" alt="Close-up of a computer circuit board" class="article-image" />
+        <div class="article-content">
+          <h2>Instead of sending every signal to a distant data center, edge AI processes some information on or near the device that produces it.</h2>
+          <p>Edge AI describes machine-learning workloads running on devices such as phones, cameras, vehicles, or local gateways. Smaller, optimized models can interpret sensor data close to its source, sometimes without a continuous cloud connection.</p>
+          <h3>Why process data at the edge?</h3>
+          <p>Local processing can reduce the time needed to respond, lower network traffic, and keep some raw data on the device. These advantages are useful when connectivity is limited or when a system needs a quick response, such as detecting an equipment anomaly.</p>
+          <h3>Trade-offs in the real world</h3>
+          <p>Devices have limited power, memory, and cooling compared with cloud servers. Models may need compression or specialization, and updating many deployed devices can be difficult. Local processing can support privacy, but it does not guarantee it: data collection and retention still need careful design.</p>
+          <h3>Keeping models dependable</h3>
+          <p>Teams need to test models under the conditions they will encounter, monitor performance over time, and plan secure updates. Fallback behavior matters too: a device should handle uncertainty safely rather than pretending every prediction is correct.</p>
+          <h3>Cloud and edge work together</h3>
+          <p>Edge devices can handle immediate tasks while cloud systems support heavier analysis, coordination, and model training. Choosing what runs where is an architectural decision shaped by latency, cost, connectivity, security, and the consequences of an error.</p>
+        </div>
+        <footer class="article-footer"><a href="index.html" class="back-link">← Back to Homepage</a></footer>
+      </article>
+    </div></main>
+    <script src="app.js"></script>
+  </body>
+</html>
